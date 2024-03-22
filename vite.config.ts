@@ -1,5 +1,4 @@
-/// <reference types="vitest" />
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import path from 'path';
@@ -8,11 +7,6 @@ export default defineConfig({
   server: {
     port: 3500,
     open: true,
-  },
-  test: {
-    globals: true,
-    setupFiles: ['./setupTests.ts'],
-    environment: 'jsdom',
   },
   build: {
     lib: {
