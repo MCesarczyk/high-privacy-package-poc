@@ -8,17 +8,19 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "index.umd.js",
+  "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "styles": "./dist/index.css"
     },
     "./dist": "./dist",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./css": "./dist/index.css"
   },
   "files": [
     "dist"
@@ -88,6 +90,7 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
+    "vite-plugin-css-injected-by-js": "^3.5.0",
     "vite-plugin-dts": "^3.7.3",
     "vitest": "^1.4.0"
   },

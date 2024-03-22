@@ -14,6 +14,8 @@ const meta = {
 
 export default meta;
 
-const Template: StoryFn<ComponentProps<typeof Button>> = () => <Button />;
+type Story = StoryFn<ComponentProps<typeof Button>>;
 
-export const _Button = Template.bind({});
+const Template: Story = () => <Button />;
+
+export const _Button: Story = Template.bind({});

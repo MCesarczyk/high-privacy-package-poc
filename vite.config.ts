@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import path from 'path';
 
 export default defineConfig({
@@ -10,9 +11,9 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'index.ts'),
       name: 'high-privacy-package-poc',
-      formats: ['es', 'cjs', 'umd'],
+      // formats: ['es', 'cjs', 'umd'],
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
@@ -27,5 +28,11 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    dts(),
+    cssInjectedByJsPlugin({
+      relativeCSSInjection: true,
+    }),
+  ],
 });
