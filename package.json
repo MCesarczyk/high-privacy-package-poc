@@ -1,6 +1,5 @@
 {
   "name": "high-privacy-package-poc",
-  "private": true,
   "version": "1.0.0",
   "description": "A proof of concept for a high privacy package",
   "author": "Michał Cesarczyk",
