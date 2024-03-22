@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
@@ -16,11 +20,25 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
   },
-  "include": ["src", "./setupTests.ts", "./vite.config.ts"],
-  "types": ["vite/client", "node", "vitest", "@testing-library/jest-dom"],
-  "typeRoots": ["./node_modules/@types", "./dist/index.d.ts"],
+  "include": [
+    "src",
+    "./setupTests.ts",
+    "./vite.config.ts"
+  ],
+  "types": [
+    "vite/client",
+    "node",
+    "vitest",
+    "@testing-library/jest-dom"
+  ],
+  "typeRoots": [
+    "./node_modules/@types",
+    "./dist/index.d.ts"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"
